@@ -1,0 +1,57 @@
+@import '../../styles/custom.scss';
+
+.product{
+    background-color: $white-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem;
+    width: 100%;
+
+    &__detail{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__image{
+        width: 42.5rem;
+    }
+
+    &__info{
+        flex: 0.7;
+        padding-right: 2rem;
+        .sold{
+            font-size: $font-size-14;
+            margin-bottom: 1rem;
+        }
+        .title{
+            font-size: $font-size-24;
+            margin-bottom: 2rem;
+        }
+        .price{
+            font-size: $font-size-46; 
+        }
+        button {
+            background-color: #3483fa;
+            width: 100%;
+        }
+    }
+
+    &__description{
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+
+        .title{
+            font-size: $font-size-28;
+            margin-bottom: 2rem;
+        }
+        .plain_text{
+            color: $secondary-color;
+            font-size: $font-size-16;
+            margin-bottom: 2rem;
+            text-align: justify;
+            width: 70%;
+        }
+    }
+}

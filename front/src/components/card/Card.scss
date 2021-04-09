@@ -1,0 +1,29 @@
+.card{
+    display: flex;
+    flex-direction: row!important;
+    justify-content: space-between;
+    &-img{
+      &-link{
+        width: 16rem;
+      }
+      &-top{
+        height: 16rem;
+      }
+    }
+  
+    &-body{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex: 1;
+      &-description{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex: 1;
+      }
+      &-location{
+        width: 9.375rem;
+      }
+    }
+}

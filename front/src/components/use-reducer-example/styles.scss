@@ -1,0 +1,16 @@
+
+.todo-container{
+    padding: 5rem;
+    p {
+        margin: 0;
+    }
+    .list-group-item {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .complete {
+        text-decoration: line-through;
+    }
+}
