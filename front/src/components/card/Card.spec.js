@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import { Card } from "./Card";
 import { MemoryRouter } from "react-router-dom";
 
-describe("Card suite", () => {
-  test("should show Card information", () => {
+describe("Card <Card>", () => {
+  test("should show Card information title", () => {
     const container = document.createElement("div");
 
     ReactDOM.render(
@@ -22,6 +22,8 @@ describe("Card suite", () => {
       </MemoryRouter>,
       container
     );
-    expect(container.textContent).toMatch("Iphone11");
+    expect(container.querySelector(".card-text").textContent).toEqual(
+      "Iphone11"
+    );
   });
 });
