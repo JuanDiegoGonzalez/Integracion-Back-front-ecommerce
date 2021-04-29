@@ -43,6 +43,11 @@ async function login(user) {
           success: true,
           msg: "Logged successfully",
           token,
+          data: {
+            username: currentUser.username,
+            email: currentUser.email,
+            roles: currentUser.roles,
+          },
         };
       } else {
         return {
