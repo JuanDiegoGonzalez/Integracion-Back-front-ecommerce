@@ -6,6 +6,7 @@ var logger = require("morgan");
 require("dotenv").config();
 
 var productsRouter = require("./routes/products");
+var usersRouter = require("./routes/users");
 
 var app = express();
 
@@ -18,6 +19,7 @@ const { connect } = require("./lib/utils/mongo_root");
 connect();
 
 app.use("/api/items", productsRouter);
+app.use("/api/users", usersRouter);
 
 app.get("*", (req, res) => {
   console.log(path.join(__dirname, "front/build/index.html"));
