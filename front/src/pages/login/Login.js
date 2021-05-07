@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { FormattedMessage } from "react-intl";
 import { UserContext } from "../../context/UserContext";
 import { useForm } from "../../hooks/useForm";
 import "./Login.scss";
@@ -33,27 +34,35 @@ export const Login = () => {
 
   return (
     <div className="container login">
-      {!user ? <h1>Login</h1> : <h1>Logout</h1>}
+      {!user ? (
+        <h1>
+          <FormattedMessage id="login" />
+        </h1>
+      ) : (
+        <h1>
+          <FormattedMessage id="logout" />
+        </h1>
+      )}
       {!user && (
         <>
           <form onSubmit={doLogin}>
             <div class="mb-3">
               <label for="username" className="form-label">
-                Username
+                <FormattedMessage id="username" />
               </label>
               <input
                 type="text"
                 className="form-control"
                 id="username"
                 name="username"
-                aria-describedby="username"
+                aria-describedby={<FormattedMessage id="username" />}
                 value={username}
                 onChange={handleInputChange}
               />
             </div>
             <div className="mb-3">
               <label for="password" className="form-label">
-                Password
+                <FormattedMessage id="password" />
               </label>
               <input
                 type="password"
@@ -66,14 +75,14 @@ export const Login = () => {
               />
             </div>
             <button type="submit" className="btn btn-primary">
-              Submit
+              <FormattedMessage id="login" />
             </button>
           </form>
         </>
       )}
       {user && (
         <button className="btn btn-warning" onClick={() => setUser(null)}>
-          Logout
+          <FormattedMessage id="logout" />
         </button>
       )}
       <pre>{user ? JSON.stringify(user) : "No data"}</pre>

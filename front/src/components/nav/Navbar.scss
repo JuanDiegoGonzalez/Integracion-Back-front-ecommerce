@@ -6,4 +6,8 @@
         display: flex;
         flex-direction: row!important;
     }
+    &-controls{
+        display: flex;
+        align-items: center;
+    }
 }
