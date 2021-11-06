@@ -6,7 +6,7 @@ import "./Login.scss";
 export const Login = () => {
   const { setUser, user } = useContext(UserContext);
 
-  const [{ username, password }, handleInputChange, reset] = useForm({
+  const [{ username, password }, handleInputChange] = useForm({
     username: "",
     password: "",
   });
@@ -37,8 +37,8 @@ export const Login = () => {
       {!user && (
         <>
           <form onSubmit={doLogin}>
-            <div class="mb-3">
-              <label for="username" className="form-label">
+            <div className="mb-3">
+              <label htmlFor="username" className="form-label">
                 Username
               </label>
               <input
@@ -52,7 +52,7 @@ export const Login = () => {
               />
             </div>
             <div className="mb-3">
-              <label for="password" className="form-label">
+              <label htmlFor="password" className="form-label">
                 Password
               </label>
               <input

@@ -29,15 +29,15 @@
     "jest/prefer-to-have-length": "warn",
     "jest/valid-expect": "error",
     "indent": ["warn", 2, { "SwitchCase": 1 }],
-    "quotes": ["error", "single"],
+    "quotes": ["warn", "single"],
     "semi": ["warn", "always"],
     "no-console": "warn",
-    "no-var": "error",
+    "no-var": "warn",
     "no-undef": 0,
-    "no-alert": "error",
-    "curly": "error",
+    "no-alert": "warn",
+    "curly": "warn",
     "space-before-blocks": ["warn", "always"],
-    "no-loop-func": "error",
+    "no-loop-func": "warn",
     "key-spacing": ["warn", { "beforeColon": false, "afterColon": true }]
   }
 }
