@@ -23,7 +23,7 @@ app.use("/api/users", usersRouter);
 
 app.get("*", (req, res) => {
   console.log(path.join(__dirname, "front/build/index.html"));
-  res.sendFile(path.join(__dirname, "front/build/index.html"));
+  res.sendFile(path.join(__dirname, "front/build', 'index.html"));
 });
 
 // catch 404 and forward to error handler
@@ -39,6 +39,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
+  console.log("error-", err);
   res.send("error");
 });
 
