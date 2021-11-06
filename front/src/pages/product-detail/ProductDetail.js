@@ -17,7 +17,7 @@ export const ProductDetail = () => {
       }
     };
     retriveData(id);
-  }, []);
+  }, [id]);
 
   return (
     <div>
